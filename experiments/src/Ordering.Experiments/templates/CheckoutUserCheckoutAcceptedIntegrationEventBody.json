@@ -1,0 +1,33 @@
+{
+  "UserId": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+  "UserName": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+  "OrderNumber": 0,
+  "City": "string",
+  "Street": "string",
+  "State": "string",
+  "Country": "string",
+  "ZipCode": "string",
+  "CardNumber": "123456789101112",
+  "CardHolderName": "string",
+  "CardExpiration": "2024-11-28T10:08:38.081Z",
+  "CardSecurityNumber": "111",
+  "CardTypeId": 1,
+  "Buyer": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+  "RequestId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Basket": {
+    "BuyerId": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+    "Items": [
+      {
+        "Id": "a::any",
+        "ProductId": 1,
+        "ProductName": "string",
+        "UnitPrice": 2,
+        "OldUnitPrice": 3,
+        "Quantity": 4,
+        "PictureUrl": "string"
+      }
+    ]
+  },
+  "Id": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+  "CreationDate": "2022-11-28T10:08:38.081Z"
+}

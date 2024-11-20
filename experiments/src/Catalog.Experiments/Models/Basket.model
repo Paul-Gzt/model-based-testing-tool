@@ -1,0 +1,11 @@
+globalVariables: [
+  checkoutEndpoint: http://localhost:58017/api/v1/basket/checkout,
+  getBasketEndpoint: http://localhost/api/v1/basket/9e3163b9-1ae6-4652-9dc6-7898ab7b7a00,
+  deleteBasketEndpoint: http://localhost/api/v1/basket/9e3163b9-1ae6-4652-9dc6-7898ab7b7a00,
+  postUpdateBasketEndpoint: http://localhost:58017/api/v1/basket,
+  exchangeName: eshop_event_bus,
+  queueName: TestingFramework
+]
+
+?redis_flush_all_data
+?http_get(endpoint) where endpoint == getBasketEndpoint

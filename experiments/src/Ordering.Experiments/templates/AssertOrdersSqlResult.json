@@ -1,0 +1,6 @@
+﻿{
+  "assertion": "csv",
+  "body": {
+    "Value": "Id,Name\n1,Amex\n2,Visa\n3,MasterCard"
+  }
+}

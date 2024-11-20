@@ -1,0 +1,7 @@
+globalVariables: []
+
+initialLocation: "l0"
+
+l0 ?inX l1
+l1 !outX l2
+l1 !outX2 l3

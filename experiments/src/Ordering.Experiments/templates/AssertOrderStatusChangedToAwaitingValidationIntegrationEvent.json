@@ -1,0 +1,9 @@
+﻿{
+  "assertion": "custom",
+  "body": {
+    "TopicName": "OrderStatusChangedToAwaitingValidationIntegrationEvent",
+    "Body": {
+  
+    }
+  }
+}

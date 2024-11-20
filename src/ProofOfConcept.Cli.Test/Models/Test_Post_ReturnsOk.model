@@ -1,0 +1,6 @@
+globalVariables: [
+  post: https://localhost:7205/post
+]
+
+?http_post(endpoint,body) where endpoint == post && body == t::PostRequest
+!http_ok(body) where body == t::GetResponse2

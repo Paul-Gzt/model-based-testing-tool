@@ -1,0 +1,11 @@
+{
+  "assertion": "all",
+  "body": [
+    {
+      "date": "assert::any-string",
+      "temperatureC": "assert:any-int",
+      "temperatureF": "assert:any-int",
+      "summary": "assert:any-string"
+    }
+  ]
+}

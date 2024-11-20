@@ -1,0 +1,6 @@
+{
+  "assertion": "exact",
+  "body": {
+    "value": "someValue"
+  }
+}

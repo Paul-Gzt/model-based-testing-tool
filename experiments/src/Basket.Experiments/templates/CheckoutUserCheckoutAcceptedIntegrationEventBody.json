@@ -1,0 +1,39 @@
+{
+  "assertion": "custom",
+  "body": {
+    "TopicName": "UserCheckoutAcceptedIntegrationEvent",
+    "Body": {
+      "UserId": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+      "UserName": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+      "OrderNumber": 0,
+      "City": "string",
+      "Street": "string",
+      "State": "string",
+      "Country": "string",
+      "ZipCode": "string",
+      "CardNumber": "string",
+      "CardHolderName": "string",
+      "CardExpiration": "2022-11-28T10:08:38.081Z",
+      "CardSecurityNumber": "string",
+      "CardTypeId": 0,
+      "Buyer": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+      "RequestId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "Basket": {
+        "BuyerId": "9e3163b9-1ae6-4652-9dc6-7898ab7b7a00",
+        "Items": [
+          {
+            "Id": "a::any",
+            "ProductId": 1,
+            "ProductName": "string",
+            "UnitPrice": 2,
+            "OldUnitPrice": 3,
+            "Quantity": 4,
+            "PictureUrl": "string"
+          }
+        ]
+      },
+      "Id": "a::any",
+      "CreationDate": "a::any"
+    }
+  }
+}

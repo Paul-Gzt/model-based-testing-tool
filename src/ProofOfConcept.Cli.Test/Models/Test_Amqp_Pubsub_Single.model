@@ -1,0 +1,9 @@
+globalVariables: [
+    topicNameIncomingOrders: orders,
+    topicNameOrderConfirmed: orders-confirmed,
+    queueName: myapp-orders-confirmed,
+    routingKey: myapp-orders
+]
+
+?amqp_receive(routingKey,topicName,body) where routingKey == routingKey && topicName == topicNameIncomingOrders && body == t::AmqpOrderInput
+!amqp_publish(topicName,body) where topicName == orders-confirmed && body == t::AmqpOrderOutput

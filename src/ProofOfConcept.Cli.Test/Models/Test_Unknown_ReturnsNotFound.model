@@ -1,0 +1,6 @@
+globalVariables: [
+  unknown_endpoint: https://localhost:7205/unknown_endpoint
+]
+
+?http_get(endpoint) where endpoint == unknown_endpoint
+!http_not_found

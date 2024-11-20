@@ -1,0 +1,10 @@
+globalVariables: [
+  x: 0
+  y: 0
+]
+
+initialLocation: "l0"
+
+l0 ?inX l1 where x == 0 update x = x + 1
+async l1 !outX(p) l2 where x == 1
+async l2 !outY(p) l3 where y == 0

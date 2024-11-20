@@ -1,0 +1,8 @@
+﻿{
+  "assertion": "custom",
+  "body": {
+    "TopicName": "GracePeriodConfirmedIntegrationEvent",
+    "Body": {
+    }
+  }
+}

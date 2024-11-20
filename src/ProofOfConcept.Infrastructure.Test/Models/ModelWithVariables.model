@@ -1,0 +1,11 @@
+globalVariables: [
+    x: 0,
+    weatherForecast: https://localhost:7205/WeatherForecast,
+    static: https://localhost:7205/static,
+    static2: https://localhost:7205/static2,
+    post: https://localhost:7205/post,
+    receive: https://localhost:7207/receive
+]
+
+?inX where x == 0 update x = x + 1
+!outX(p) where x == 1

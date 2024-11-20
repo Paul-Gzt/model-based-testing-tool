@@ -1,0 +1,6 @@
+globalVariables: [
+    baseUrl: "http://localhost/api/v1"
+]
+
+?http_get(endpoint) where endpoint == baseUrl
+!http_ok(body) where body == t::SampleTemplate

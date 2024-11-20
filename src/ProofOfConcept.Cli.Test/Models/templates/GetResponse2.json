@@ -1,0 +1,35 @@
+{
+  "assertion": "exact",
+  "body": [
+    {
+      "date": "2022-09-21T00:00:00",
+      "temperatureC": 24,
+      "temperatureF": 75,
+      "summary": "Warm"
+    },
+    {
+      "date": "2022-09-22T00:00:00",
+      "temperatureC": 24,
+      "temperatureF": 75,
+      "summary": "Warm"
+    },
+    {
+      "date": "2022-09-23T00:00:00",
+      "temperatureC": 24,
+      "temperatureF": 75,
+      "summary": "Warm"
+    },
+    {
+      "date": "2022-09-24T00:00:00",
+      "temperatureC": 24,
+      "temperatureF": 75,
+      "summary": "Warm"
+    },
+    {
+      "date": "2022-09-25T00:00:00",
+      "temperatureC": 24,
+      "temperatureF": 75,
+      "summary": "Warm"
+    }
+  ]
+}

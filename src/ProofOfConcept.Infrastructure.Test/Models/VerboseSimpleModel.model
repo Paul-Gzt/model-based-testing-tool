@@ -1,0 +1,8 @@
+globalVariables: [ 
+    x: 0
+]
+
+initialLocation: "l0"
+
+l0 ?inX l1 where x == 0 update x = x + 1
+l1 !outX(p) l2 where x == 1

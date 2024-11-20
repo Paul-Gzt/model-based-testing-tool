@@ -1,0 +1,9 @@
+{
+    "assertion": "exact",
+    "body": {
+        "TopicName": "orders-confirmed",
+        "Body": {
+            "orderId": 1
+        }
+    }
+}

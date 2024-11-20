@@ -1,0 +1,6 @@
+globalVariables: [
+  static: https://localhost:7205/static
+]
+
+?http_get(endpoint) where endpoint == static
+!http_ok(body) where body == t::GetResponse2

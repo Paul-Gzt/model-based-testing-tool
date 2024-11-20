@@ -1,0 +1,8 @@
+globalVariables: [
+  x: 0,
+  y: 0
+]
+  
+?inX where x == 0 update x = x + 1
+!@outX(p) where x == 1
+!@outY(p) where y == 0 

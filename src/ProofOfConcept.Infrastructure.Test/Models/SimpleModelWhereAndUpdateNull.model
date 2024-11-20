@@ -1,0 +1,6 @@
+globalVariables: [
+  x: 0 
+]
+  
+?inX(p) where p < 10 update x = x + 1
+!outX(p)
