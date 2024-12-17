@@ -18,9 +18,9 @@ public class HttpClient : IHttpClient
 
     public async Task<Trace> PostAsync(string endpoint, string body)
     {
-        using var restClient = new RestClient(endpoint);
+	var options = new RestClientOptions(endpoint) { MaxTimeout = 30000 }; 
+        using var restClient = new RestClient(options); 
         var request = new RestRequest().AddJsonBody(body);
-
         var result = await restClient.ExecutePostAsync(request);
 
         return LabelMapping.MapToTrace(result);

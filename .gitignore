@@ -1,0 +1,5 @@
+/src/out
+/src/Models
+*test-report*.txt
+*.svg
+*.dot

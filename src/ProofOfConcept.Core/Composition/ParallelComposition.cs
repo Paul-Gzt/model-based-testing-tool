@@ -13,10 +13,19 @@ public static class ParallelComposition
         var switchesB = b.Switches
             .Where(x => x.Gate.ActionType == ActionType.Input)
             .ToList();
-
         
         var synchronizingGatesA = GetSwitchesAndGuards(switchesA);
         var synchronizingGatesB = GetSwitchesAndGuards(switchesB);
+	
+	foreach (var foo in synchronizingGatesA) {
+		Console.WriteLine("{0} {1}", foo.Switch.Gate.Label, foo.RightOperandLabel);
+	}
+
+	Console.WriteLine();
+
+	foreach (var foo in synchronizingGatesB) {
+		Console.WriteLine("{0} {1}", foo.Switch.Gate.Label, foo.RightOperandLabel);
+	}
 
         var intersectedGates = 
             from gateA in synchronizingGatesA
@@ -46,8 +55,6 @@ public static class ParallelComposition
 
         return url.Length < 2 ? operand : url[1];
     }
-
-    // ?http_get(endpoint) => http_get(endpoint)
     // TODO: Never put the action in the specification label?
     private static string RemoveAction(string input)
     {

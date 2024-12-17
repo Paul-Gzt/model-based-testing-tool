@@ -11,6 +11,7 @@ using ProofOfConcept.Infrastructure.Microservices.Protocol.Redis;
 using ProofOfConcept.Infrastructure.Microservices.Protocol.Sql;
 using ProofOfConcept.Infrastructure.Templates;
 using ProofOfConcept.Infrastructure.Utility;
+using ProofOfConcept.Core.Composition;
 using HttpClient = ProofOfConcept.Infrastructure.Microservices.Protocol.Http.HttpClient;
 
 namespace ProofOfConcept.Cli;
@@ -38,8 +39,17 @@ public static class ModelTestingMode
     {
         TestReporter.ProcessTimeEvent(TimeEvent.ModelParsingStarted);
         var specification = await ModelReader.ReadFromFileAsync(modelPath);
-        TestReporter.ProcessTimeEvent(TimeEvent.ModelParsingStopped);
+	TestReporter.ProcessTimeEvent(TimeEvent.ModelParsingStopped);
         
+//	var specification2 = await ModelReader.ReadFromFileAsync("Models/ComposeTest.model");
+
+//	var actions = ParallelComposition.FindSynchronizingActions(specification, specification2);
+//	Console.WriteLine(actions.Count);
+//	foreach ((var foo, var bar) in actions) {
+//		Console.WriteLine("{0} {1} {2} {3} {4} {5}", foo.From.Name, foo.Gate.Label, foo.To.Name, bar.From.Name, bar.Gate.Label, bar.To.Name);
+//	}
+
+
         var testPurpose = TestPurpose.GenerateFrom(specification);
         TestReporter.ProcessDataEvent(DataEvent.TestCasesGenerated, 1);
 
@@ -64,17 +74,20 @@ public static class ModelTestingMode
 
         var httpOutputAdapter = new HttpOutputAdapter();
         var sqlOutputAdapter = new SqlOutputAdapter();
+	var dynamosGrpcOutputAdapter = new DynamosGrpcOutputAdapter();
         var outputAdapters = new List<IOutputAdapter>
         {
             httpOutputAdapter,
-            sqlOutputAdapter
+            sqlOutputAdapter,
+	    dynamosGrpcOutputAdapter,
         };
 
         var inputAdapters = new List<IInputAdapter>
         {
             new HttpInputAdapter(new HttpClient(), testingContext).SetOutputAdapter(httpOutputAdapter),
             new RedisInputAdapter(new RedisClient()),
-            new SqlInputAdapter(new SqlClient("Server=tcp:127.0.0.1,5433;Database=Microsoft.eShopOnContainers.Services.OrderingDb;User Id=sa;Password=Geheim_123;TrustServerCertificate=True;"), testingContext).SetOutputAdapter(sqlOutputAdapter)
+            new SqlInputAdapter(new SqlClient("Server=tcp:127.0.0.1,5433;Database=Microsoft.eShopOnContainers.Services.OrderingDb;User Id=sa;Password=Geheim_123;TrustServerCertificate=True;"), testingContext).SetOutputAdapter(sqlOutputAdapter),
+	    new DynamosGrpcInputAdapter(testingContext),
         };
 
         if (specification.InitialVariables.Any(x => x.Name.Contains("queueName", StringComparison.InvariantCultureIgnoreCase)))

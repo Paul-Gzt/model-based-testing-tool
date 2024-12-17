@@ -111,7 +111,7 @@ public class JsonTemplateAsserter : IAsserter
     {
         if (string.IsNullOrEmpty(value)) return new AssertionResult(false, "We can't assert empty bodies");
 
-        var diff = JsonDifferentiator.Differentiate(templateDto.Body, JToken.Parse(value), OutputMode.Detailed);
+        var diff = JsonDifferentiator.Differentiate(templateDto.Body, JToken.Parse(value), OutputMode.Detailed, true);
 
         if (diff is null) return new AssertionResult(true, string.Empty);
 

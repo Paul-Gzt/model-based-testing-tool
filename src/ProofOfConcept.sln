@@ -4,13 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProofOfConcept.Cli", "Proof
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProofOfConcept.Core", "ProofOfConcept.Core\ProofOfConcept.Core.csproj", "{0314E9DB-0F5C-4103-926F-AA2B109661A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProofOfConcept.Core.Test", "ProofOfConcept.Core.Test\ProofOfConcept.Core.Test.csproj", "{9A4B2363-0DF8-41E7-A61A-CA098F9C0B0D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProofOfConcept.Infrastructure", "ProofOfConcept.Infrastructure\ProofOfConcept.Infrastructure.csproj", "{18DEE3FE-A25D-4F27-9D71-84A6E867F88F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProofOfConcept.Infrastructure.Test", "ProofOfConcept.Infrastructure.Test\ProofOfConcept.Infrastructure.Test.csproj", "{3DCCC3D1-ECA1-49E9-853E-EFE198AC76E1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProofOfConcept.Cli.Test", "ProofOfConcept.Cli.Test\ProofOfConcept.Cli.Test.csproj", "{8C4DA41B-C859-4AED-B563-4AF90011C0F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

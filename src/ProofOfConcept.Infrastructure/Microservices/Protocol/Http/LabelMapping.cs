@@ -13,13 +13,16 @@ public static class LabelMapping
         { HttpStatusCode.BadRequest, "!http_bad_request" },
         { HttpStatusCode.NotFound, "!http_not_found" },
         { HttpStatusCode.InternalServerError, "!http_internal_server_error" },
+	{ HttpStatusCode.Unauthorized, "!http_unauthorized" },
+	{ HttpStatusCode.BadGateway, "!http_bad_gateway" },
     };
 
     public static Trace MapToTrace(RestResponseBase restResponse)
     {
         if (!SupportedLabels.TryGetValue(restResponse.StatusCode, out var label) && label is null)
         {
-            throw new NotImplementedException($"Unsupported StatusCode: {restResponse.StatusCode}");
+	    label = "!http_unknown";
+        //    throw new NotImplementedException($"Unsupported StatusCode: {restResponse.StatusCode}");
         }
 
         return new Trace(new Gate(ActionType.Output, label), restResponse.Content ?? "");
